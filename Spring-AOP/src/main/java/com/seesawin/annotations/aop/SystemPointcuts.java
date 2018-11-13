@@ -1,4 +1,4 @@
-package com.seesawin.aop;
+package com.seesawin.annotations.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SystemPointcuts {
 
-	@Pointcut("within(com.seesawin.service..*)")
+	@Pointcut("within(com.seesawin.annotations.service..*)")
 	public void before() {
 	}
 
@@ -23,7 +23,7 @@ public class SystemPointcuts {
 		System.out.println("*@Before");
 	}
 
-	@Pointcut("within(com.seesawin.service..*)")
+	@Pointcut("within(com.seesawin.annotations.service..*)")
 	public void afterFinal() {
 	}
 
@@ -32,7 +32,7 @@ public class SystemPointcuts {
 		System.out.println("*@After");
 	}
 
-	@Pointcut("within(com.seesawin.service..*)")
+	@Pointcut("within(com.seesawin.annotations.service..*)")
 	public void afterRet() {
 	}
 
@@ -46,7 +46,7 @@ public class SystemPointcuts {
 		System.out.println("*@AfterReturning : " + retVal);
 	}
 
-	@Pointcut("within(com.seesawin.service..*)")
+	@Pointcut("within(com.seesawin.annotations.service..*)")
 	public void afterThrowing() {
 	}
 
@@ -60,7 +60,7 @@ public class SystemPointcuts {
 		System.out.println("*@AfterThrowing Exception ex : " + ex.getMessage());
 	}
 
-	@Pointcut("within(com.seesawin.service..*)")
+	@Pointcut("within(com.seesawin.annotations.service..*)")
 	public void around() {
 	}
 

@@ -1,9 +1,9 @@
-package com.seesawin;
+package com.seesawin.annotations;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.seesawin.service.MyService;
+import com.seesawin.annotations.service.MyService;
 
 public class Main {
 

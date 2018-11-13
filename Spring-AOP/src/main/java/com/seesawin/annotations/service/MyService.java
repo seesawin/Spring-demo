@@ -1,4 +1,4 @@
-package com.seesawin.service;
+package com.seesawin.annotations.service;
 
 import org.springframework.stereotype.Component;
 

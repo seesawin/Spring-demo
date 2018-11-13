@@ -1,4 +1,4 @@
-package com.seesawin.aop;
+package com.seesawin.annotations.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AroundAspects {
 
-	@Around("com.seesawin.aop.SystemPointcuts.around()")
+	@Around("com.seesawin.annotations.aop.SystemPointcuts.around()")
 	public Object execAround(ProceedingJoinPoint pjp) throws Throwable {
 		System.out.println("@Around start");
 
