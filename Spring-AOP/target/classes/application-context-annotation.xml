@@ -12,19 +12,11 @@
 						http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
 						http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
-
-	<!-- Constructor-based dependency injection -->
-	<bean id="Service1" class="com.seesawin.xml.Service1">
-		<constructor-arg ref="Dao" />
-	</bean>
-
-	<!-- Setter-based dependency injection -->
-	<bean id="Service2" class="com.seesawin.xml.Service2">
-		<!-- use alias -->
-		<property name="dao" ref="Dao" />
-	</bean>
+	<!-- enable autowiring of components -->
+	<context:component-scan base-package="com.seesawin" />
+	<context:annotation-config />
 	
-	<bean id="Dao" class="com.seesawin.xml.Dao">
-	</bean>
+	<!-- enable AOP -->
+	<aop:aspectj-autoproxy />
 
 </beans>

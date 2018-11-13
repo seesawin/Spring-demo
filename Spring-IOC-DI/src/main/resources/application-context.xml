@@ -14,14 +14,17 @@
 
 
 	<!-- Constructor-based dependency injection -->
-	<bean id="Service1" class="com.seesawin.Service">
-		<constructor-arg ref="connectDao" />
+	<bean id="Service1" class="com.seesawin.xml.Service1">
+		<constructor-arg ref="Dao" />
 	</bean>
 
 	<!-- Setter-based dependency injection -->
-	<bean id="Service2" class="com.seesawin.Service">
+	<bean id="Service2" class="com.seesawin.xml.Service2">
 		<!-- use alias -->
-		<property name="connectDao" ref="dataGetter" />
+		<property name="dao" ref="Dao" />
+	</bean>
+	
+	<bean id="Dao" class="com.seesawin.xml.Dao">
 	</bean>
 
 </beans>

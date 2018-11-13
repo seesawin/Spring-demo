@@ -1,7 +1,9 @@
-package com.seesawin.annotations;
+package com.seesawin;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.seesawin.service.MyService;
 
 public class Main {
 
@@ -9,13 +11,13 @@ public class Main {
 		ApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "application-context-annotation.xml" });
 
 		// get bean from Spring context container
-		Service1 service1 = (Service1) context.getBean("Service1");
-		String name1 = service1.getName();
-		System.out.println("name1:" + name1);
-
-		Service2 service2 = (Service2) context.getBean("Service2");
-		String name2 = service2.getName();
-		System.out.println("name2:" + name2);
+		MyService myService = (MyService) context.getBean(MyService.class);
+		try {
+			myService.setName("Qoo");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
